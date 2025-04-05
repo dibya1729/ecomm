@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - DARKS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #121212; /* Dark background */
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .about-container {
+      width: 85%;
+      margin: 50px auto;
+      text-align: center;
+      background-color: #1e1e1e; /* Slightly lighter dark */
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-heading {
+      font-size: 3em;
+      color: #00d9ff; /* Bright cyan */
+      text-transform: uppercase;
+      animation: fadeIn 1.5s ease-in-out;
+      letter-spacing: 2px;
+    }
+
+    .about-text {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #bbbbbb; /* Light gray */
+      animation: slideIn 1s ease-out;
+      margin-bottom: 30px;
+    }
+
+    .about-team h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #00d9ff; /* Bright cyan */
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      width: 180px;
+      background-color: #2a2a2a; /* Dark gray card */
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .team-member:hover {
+      transform: scale(1.1);
+      background-color: #00d9ff; /* Card color change on hover */
+      color: #000; /* Text change on hover */
+    }
+
+    .team-member h3 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .team-member p {
+      color: #bbbbbb;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Button styles */
+    .about-text strong {
+      color: #00ff6b; /* Green highlight for DARKS */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    <h1 class="about-heading">About DARKS</h1>
+    <p class="about-text">
+      Welcome to <strong>DARKS</strong>, your one-stop online shopping destination! At DARKS, we offer a wide range of products including men's and women's fashion, mobiles, laptops, TVs, home appliances, electronics, media, and gaming. Whether you're looking for the latest trends in fashion or the hottest gadgets in the tech world, we've got you covered!
+    </p>
+
+    <div class="about-team">
+      <h2>Meet the DARKS Squad</h2>
+      <div class="team-members">
+        <div class="team-member" id="dibyasha">
+          <h3>Dibyasha</h3>
+          <p>The creative genius behind the designs.</p>
+        </div>
+        <div class="team-member" id="aditya">
+          <h3>Aditya</h3>
+          <p>The tech expert keeping the system flawless.</p>
+        </div>
+        <div class="team-member" id="rakesh">
+          <h3>Rakesh</h3>
+          <p>The marketing strategist making DARKS shine.</p>
+        </div>
+        <div class="team-member" id="kulin">
+          <h3>Kulin</h3>
+          <p>The analytics master crunching numbers for success.</p>
+        </div>
+        <div class="team-member" id="swagatam">
+          <h3>Swagatam</h3>
+          <p>The customer service hero ensuring satisfaction.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="about-text">
+      DARKS refers to <strong>Dibyasha</strong>, <strong>Aditya</strong>, <strong>Rakesh</strong>, <strong>Kulin</strong>, and <strong>Swagatam</strong>. Together, we bring you an unparalleled shopping experience.
+    </p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const teamMembers = document.querySelectorAll('.team-member');
+
+      teamMembers.forEach(member => {
+        member.addEventListener('click', function() {
+          alert(`You clicked on ${member.querySelector('h3').textContent}`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

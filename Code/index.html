@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Step Towards DARKS</title>
+    <link rel="icon" href="/Picture/DARKS-logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="/Picture/DARKS-logo.png" height="75px" width="200px" alt=""></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="man's fashion.html">Shop</a></li>
+                    <li class="dropdown">
+                        <a href="#categories">Categories</a>
+                    </li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="about us.html">Contact Us</a></li>
+                    <a href="loginpage.html">Login/Sign-Up</li>
+                    <a href="#cart">Cart (0)</a>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-bar">
+        <ul>
+            <li class="category" onclick="toggleDropdown('top-offers')">
+                <img src="/Picture/peakpx.jpg" alt="Top Offers">
+                <span>Top Offers</span>
+                <div class="dropdown" id="top-offers">
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                </div>
+            </li>
+            <li class="category">
+                <img src="/Picture/grocery.png" alt="Grocery">
+                <span>Grocery</span>
+            </li>
+            <li class="category">
+                <img src="/Picture/mobiles.jpeg" alt="Mobiles">
+                <span>Mobiles</span>
+            </li>
+            <li class="category">
+                <img src="/Picture/fashion.jpg" alt="Fashion">
+                <span>Fashion</span>
+            </li>
+            <li class="category">
+                <img src="/Picture/electronics.jpg" alt="Electronics">
+                <span>Electronics</span>
+            </li>
+            <li class="category">
+                <img src="/Picture/home.jpg" alt="Home">
+                <span>Home</span>
+            </li>
+            <li class="category">
+                <img src="/Picture/appliances.webp" alt="Appliances">
+                <span>Appliances</span>
+            </li>
+            <li class="category">
+                <img src="/Picture/travel.jpg" alt="Travel">
+                <span>Travel</span>
+            </li>
+            <li class="category">
+                <img src="/Picture/beauty.jpg" alt="Beauty, Toys & More">
+                <span>Beauty, Toys & More</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="/Picture/slide-1.jpg" alt="Image 1">
+            <img src="/Picture/slide-2.jpg" alt="Image 2">
+            <img src="/Picture/slide-3.jpg" alt="Image 3">
+            <img src="/Picture/slide-4.jpg" alt="Image 4">
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="product-list-section">
+        <p style="color: white; font-size: 80px; font-weight: bolder; font-family: Copperplate Gothic; margin-top: 10px; margin-bottom: 30px;">Our Products</p>
+        <div class="product-list" id="product-list">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+   <section class="categories">
+    <div class="category-card">
+        <img src="/Picture/men-fashion.jpg" alt="Men's Fashion">
+        <div class="category-content">
+            <h2>Men's Fashion</h2>
+            <p>Discover the latest trends in men's fashion with a wide range of clothing, accessories, and more.</p>
+            <button class="explore-btn"><a href="man's fashion.html" style="text-decoration: none; color: white;">Explore</a></button>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <img src="/Picture/women-fashion.avif" alt="Women's Fashion">
+        <div class="category-content">
+            <h2>Women's Fashion</h2>
+            <p>Explore a diverse collection of women's fashion from casual wear to elegant attire and accessories.</p>
+            <button class="explore-btn" ><a href="/Women fashion/women fashion.html" style="text-decoration: none; color: white;">Explore</a></button>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <img src="/Picture/mobiless.jpeg" alt="Mobiles">
+        <div class="category-content">
+            <h2>Mobiles</h2>
+            <p>Browse the latest smartphones and mobile devices from top brands with cutting-edge technology.</p>
+            <button class="explore-btn" ><a href="/Mobile/index.html" style="text-decoration: none; color: white;">Explore</a></button>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <img src="/Picture/eloctronic.webp" alt="Electronics">
+        <div class="category-content">
+            <h2>Electronics</h2>
+            <p>Find high-quality electronics from TVs to laptops, gadgets, and home appliances.</p>
+            <button class="explore-btn"><a href="/Mobile/index.html" style="text-decoration: none; color: white;">Explore</a></button>
+        </div>
+    </div>
+</section>
+
+<div class="review-card">
+    <h2>Leave a Review</h2>
+    <p>Click stars to rate the product</p>
+    <div class="stars">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div>
+    <textarea placeholder="Share your review about recently purchased product"></textarea>
+    <button class="submit-btn">Submit Review</button>
+</div>
+
+<footer>
+    <div class="footer-top">
+        <p><strong>Top Stories:</strong> Brand Directory</p>
+        <div class="most-searched">
+            <span>MOST SEARCHED IN FURNITURE:</span> 
+            <a href="#">HOME DECOR INDIA</a> |
+            <a href="#">CORNER SHELVES</a> |
+            <a href="#">KIDS CUPBOARD</a> |
+            <a href="#">JUMBO BEAN BAGS</a> |
+            <a href="#">NILKAMAL BEDS</a> |
+            <a href="#">KING BEDS</a> |
+            <a href="#">ENGINEERED WOOD CHAIRS</a> |
+            <a href="#">... MORE</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>ABOUT</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Flipkart Stories</a>
+                <a href="#">Press</a>
+                <a href="#">Corporate Information</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>GROUP COMPANIES</h4>
+                <a href="#">Myntra</a>
+                <a href="#">Cleartrip</a>
+                <a href="#">Shopsy</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>HELP</h4>
+                <a href="#">Payments</a>
+                <a href="#">Shipping</a>
+                <a href="#">Cancellation & Returns</a>
+                <a href="#">FAQ</a>
+                <a href="#">Report Infringement</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>CONSUMER POLICY</h4>
+                <a href="#">Cancellation & Returns</a>
+                <a href="#">Terms Of Use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Grievance Redressal</a>
+                <a href="#">EPR Compliance</a>
+            </div>
+
+            <div class="footer-column address-column">
+                <h4>Mail Us:</h4>
+                <address>
+                    DARKS Internet Private Limited,<br>
+                    Buildings Alyssa, Bhubaneswar &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Jaydev Vihar, 560103, Odisha, India.
+                </address>
+            </div>
+
+            <div class="footer-column registered-office">
+                <h4>Registered Office Address:</h4>
+                <address>   
+                    DARKS Internet Private Limited,<br>
+                    Buildings Alyssa, Bhubaneswar &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Odisha, 560103, India.<br>
+                    CIN : U51109KA2012PTC066107<br>
+                    Telephone: <a href="tel:+04445614700">044-45614700</a> / <a href="tel:+04467415800">044-67415800</a>
+                </address>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-extra">
+            <div class="footer-options">
+                <a href="#">Become a Seller</a>
+                <a href="#">Advertise</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Help Center</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2024 - DARKS 
+                <div class="payment-icons">
+                    <img src="/payment icon/visa.png" alt="Visa">
+                    <img src="/payment icon/mastercard.png" alt="MasterCard">
+                    <img src="/payment icon/rupay.jpeg" alt="RuPay">
+                    <img src="/payment icon/netbanking.png" alt="Net Banking">
+                    <img src="/payment icon/cashondelivary.png" alt="Cash on Delivery">
+                    <img src="/payment icon/emi.png" alt="Easy EMI">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
